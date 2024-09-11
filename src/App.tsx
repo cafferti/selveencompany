@@ -3,12 +3,14 @@
 // import viteLogo from '/vite.svg'
 import './index.css'
 import Signin from './signin'
+import Upload from './upload'
 
 
 function App() {
   return (
     <div>
-      <Signin/>
+      {/* <Signin/> */}
+      <Upload/>
     </div>
   )
 }
