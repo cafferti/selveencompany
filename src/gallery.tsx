@@ -7,7 +7,7 @@ import saulltechtrash from "./assets/Icon.svg";
 function gallery() {
   return (
     <div>
-      <div className=" grid-for-images bg-[#9C9C9C] min h-[100%] pt-[50px] font-inter">
+      <div className=" grid-for-images bg-[#f9f9f9] min h-[100%] pt-[50px] font-inter">
         <div className="mx-[10%] grid gap-7  grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
           <section className="flex flex-col  bg-[#ffff] rounded-3xl px-2 py-5 max-w-[20rem]">
             <img className="w-[20%] ml-[75%] pb-4" src={saulltechstar} alt="" />
