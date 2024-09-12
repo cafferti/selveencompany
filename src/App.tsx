@@ -4,13 +4,15 @@
 import './index.css'
 import Signin from './signin'
 import Upload from './upload'
+import Gallery from './gallery'
 
 
 function App() {
   return (
     <div>
       {/* <Signin/> */}
-      <Upload/>
+      {/* <Upload/> */}
+      <Gallery/>
     </div>
   )
 }

@@ -49,6 +49,7 @@ function signin (){
             const data = await response.json()
             console.log(data)
             console.log('good boy')
+            toast.success('Admin Logged In Sucessfully')
         
          }else if(response.status === 401){
            toast.warning('wrong username or password')

@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import sampleimg from './assets/chris-ried-ieic5Tq8YMk-unsplash.jpg'
 
 
 const collectonsubmit = async (e) => {
@@ -72,17 +73,18 @@ const collectonsubmit = async (e) => {
 
 function upload() {
   return (
-    <div className='h-screen '>
+    <div className=' '>
       <ToastContainer />
 
-      <form onSubmit={collectonsubmit} className='bg-slate-900 text-white  h-[100%] w-[100%]'>
-        <input name='description' placeholder='Description' className=' bg-inherit border-[5px] px-3 w-[100%] max-w-[20rem] border-gray-800 ml-5 mt-7 py-2 rounded-2xl' type="text" /> <br />
-        <input name='imageUrl' placeholder='image URL' className=' bg-wh border-[5px] px-3 w-[100%] max-w-[20rem] border-gray-800 ml-5 mt-7 py-2 rounded-2xl bg-inherit' type="file" /> <br />
-        <input name='price' placeholder='Price' className=' bg-inherit border-[5px] px-3 w-[100%] max-w-[20rem] border-gray-800 ml-5 mt-7 py-2 rounded-2xl' type="text" /> <br />
+      <form onSubmit={collectonsubmit} className='bg-slate-900 text-white h-screen  w-[100%]'>
+        <input name='description' placeholder='Description' className=' bg-inherit border-[5px] px-3 w-[100%] max-w-[20rem] border-gray-800 ml-5 mt-4 py-2 rounded-2xl' type="text" /> <br />
+        <input name='imageUrl' placeholder='image URL' className=' bg-wh border-[5px] px-3 w-[100%] max-w-[20rem] border-gray-800 ml-5 mt-4 py-2 rounded-2xl bg-inherit' type="file" /> <br />
+        <input name='price' placeholder='Price' className=' bg-inherit border-[5px] px-3 w-[100%] max-w-[20rem] border-gray-800 ml-5 mt-4 py-2 rounded-2xl' type="text" /> <br />
 
-        <input name='name' placeholder='Name' className=' bg-inherit border-[5px] px-3 w-[100%] max-w-[20rem] border-gray-800 ml-5 mt-7 py-2 rounded-2xl' type="text" /> <br />
+        <input name='name' placeholder='Name' className=' bg-inherit border-[5px] px-3 w-[100%] max-w-[20rem] border-gray-800 ml-5 mt-4 py-2 rounded-2xl' type="text" /> <br />
         <button className='p-2 rounded-2xl bg-white text-black my-2 px-5 ml-5'>Upload</button>
       </form>
+
     </div>
 
   )
