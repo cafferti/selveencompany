@@ -10,13 +10,13 @@ import Sidenav from './sidenav'
 
 function App() {
   return (
-    <div className='flex '>
+    <div className='flex bg-[#f9f9f9] '>
       {/* <Signin/> */}
       {/* <Upload/> */}
       <div className='w-[70%] fixed'>
       <Sidenav/>
       </div>
-      <div className=' md:ml-[20%] w-[100%]'>      < Gallery/>
+      <div className='sm:ml-[23%]   w-[100%]'>      < Gallery/>
       </div>
     </div>
   )

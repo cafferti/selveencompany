@@ -21,11 +21,11 @@ function gallery() {
         </div>
 
 
-        <div className="sm:mx-[10%] grid gap-4 pt-[10rem]  grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
+        <div className="sm:ml-[10%] grid gap-4 pt-[10rem]  grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
 
 
 
-          <section className="flex flex-col  bg-[#ffff] rounded-3xl  px-2 pt-2  pb-[0px] max-w-[12rem]">
+          <section className="flex flex-col mx-auto  bg-[#ffff] rounded-3xl  px-2 pt-2  pb-[0px] max-w-[15rem]">
             <img className="w-[10%] ml-[80%] pb-1" src={saulltechstar} alt="" />
             <img className=" rounded-lg pb-3 w-[10rem] mx-[auto] " src={sampleimg} alt="" />
             <hr />
@@ -38,7 +38,7 @@ function gallery() {
               </div>
             </div>
             <h1 className="font-semibold ">England House jardin</h1>
-            <h2 className="text-[#828282] my-1 font- border-r">
+            <h2 className="text-[#828282] text-[12px] font-[8px] border-r">
               Description this omnis repudiandae! Accusantium excepturi odit
               unde ut.
             </h2>
@@ -51,121 +51,126 @@ function gallery() {
               <img src={saulltechlove} alt="" />
             </div>
           </section>
+
+          <section className="flex flex-col mx-auto  bg-[#ffff] rounded-3xl  px-2 pt-2  pb-[0px] max-w-[15rem]">
+            <img className="w-[10%] ml-[80%] pb-1" src={saulltechstar} alt="" />
+            <img className=" rounded-lg pb-3 w-[10rem] mx-[auto] " src={sampleimg} alt="" />
+            <hr />
+            <div className="flex items-center">
+              <p className="text-xl font-bold my-3">
+                <span className="text-[#FFE600] px-1">₦</span>600<span>+</span>{" "}
+              </p>
+              <div className="text-[#828282] border-[2px] text-[10px] p-1 rounded-xl mx-2">
+                <p className="">50% off</p>
+              </div>
+            </div>
+            <h1 className="font-semibold ">England House jardin</h1>
+            <h2 className="text-[#828282] text-[12px] font-[8px] border-r">
+              Description this omnis repudiandae! Accusantium excepturi odit
+              unde ut.
+            </h2>
+            <hr />
+            <div className="flex justify-between">
+              <button className="flex text-center align-middle items-center justify-center bg-[#1859A6] rounded-lg w-[70%] text-white  p-1 my-3">
+                <p className="mx-2">Delete</p>
+                <img className="w-[10%] mx-1" src={saulltechtrash} alt="" />
+              </button>
+              <img src={saulltechlove} alt="" />
+            </div>
+          </section>
+
+          <section className="flex flex-col mx-auto  bg-[#ffff] rounded-3xl  px-2 pt-2  pb-[0px] max-w-[15rem]">
+            <img className="w-[10%] ml-[80%] pb-1" src={saulltechstar} alt="" />
+            <img className=" rounded-lg pb-3 w-[10rem] mx-[auto] " src={sampleimg} alt="" />
+            <hr />
+            <div className="flex items-center">
+              <p className="text-xl font-bold my-3">
+                <span className="text-[#FFE600] px-1">₦</span>600<span>+</span>{" "}
+              </p>
+              <div className="text-[#828282] border-[2px] text-[10px] p-1 rounded-xl mx-2">
+                <p className="">50% off</p>
+              </div>
+            </div>
+            <h1 className="font-semibold ">England House jardin</h1>
+            <h2 className="text-[#828282] text-[12px] font-[8px] border-r">
+              Description this omnis repudiandae! Accusantium excepturi odit
+              unde ut.
+            </h2>
+            <hr />
+            <div className="flex justify-between">
+              <button className="flex text-center align-middle items-center justify-center bg-[#1859A6] rounded-lg w-[70%] text-white  p-1 my-3">
+                <p className="mx-2">Delete</p>
+                <img className="w-[10%] mx-1" src={saulltechtrash} alt="" />
+              </button>
+              <img src={saulltechlove} alt="" />
+            </div>
+          </section>
+
+
+
+          <section className="flex flex-col mx-auto  bg-[#ffff] rounded-3xl  px-2 pt-2  pb-[0px] max-w-[15rem]">
+            <img className="w-[10%] ml-[80%] pb-1" src={saulltechstar} alt="" />
+            <img className=" rounded-lg pb-3 w-[10rem] mx-[auto] " src={sampleimg} alt="" />
+            <hr />
+            <div className="flex items-center">
+              <p className="text-xl font-bold my-3">
+                <span className="text-[#FFE600] px-1">₦</span>600<span>+</span>{" "}
+              </p>
+              <div className="text-[#828282] border-[2px] text-[10px] p-1 rounded-xl mx-2">
+                <p className="">50% off</p>
+              </div>
+            </div>
+            <h1 className="font-semibold ">England House jardin</h1>
+            <h2 className="text-[#828282] text-[12px] font-[8px] border-r">
+              Description this omnis repudiandae! Accusantium excepturi odit
+              unde ut.
+            </h2>
+            <hr />
+            <div className="flex justify-between">
+              <button className="flex text-center align-middle items-center justify-center bg-[#1859A6] rounded-lg w-[70%] text-white  p-1 my-3">
+                <p className="mx-2">Delete</p>
+                <img className="w-[10%] mx-1" src={saulltechtrash} alt="" />
+              </button>
+              <img src={saulltechlove} alt="" />
+            </div>
+          </section>
+
+
+
+          <section className="flex flex-col mx-auto  bg-[#ffff] rounded-3xl  px-2 pt-2  pb-[0px] max-w-[15rem]">
+            <img className="w-[10%] ml-[80%] pb-1" src={saulltechstar} alt="" />
+            <img className=" rounded-lg pb-3 w-[10rem] mx-[auto] " src={sampleimg} alt="" />
+            <hr />
+            <div className="flex items-center">
+              <p className="text-xl font-bold my-3">
+                <span className="text-[#FFE600] px-1">₦</span>600<span>+</span>{" "}
+              </p>
+              <div className="text-[#828282] border-[2px] text-[10px] p-1 rounded-xl mx-2">
+                <p className="">50% off</p>
+              </div>
+            </div>
+            <h1 className="font-semibold ">England House jardin</h1>
+            <h2 className="text-[#828282] text-[12px] font-[8px] border-r">
+              Description this omnis repudiandae! Accusantium excepturi odit
+              unde ut.
+            </h2>
+            <hr />
+            <div className="flex justify-between">
+              <button className="flex text-center align-middle items-center justify-center bg-[#1859A6] rounded-lg w-[70%] text-white  p-1 my-3">
+                <p className="mx-2">Delete</p>
+                <img className="w-[10%] mx-1" src={saulltechtrash} alt="" />
+              </button>
+              <img src={saulltechlove} alt="" />
+            </div>
+          </section>
+
+
+
+
+
+
 
           
-          <section className="flex flex-col  bg-[#ffff] rounded-3xl  px-2 pt-2  pb-[0px] max-w-[12rem]">
-            <img className="w-[10%] ml-[80%] pb-1" src={saulltechstar} alt="" />
-            <img className=" rounded-lg pb-3 w-[10rem] mx-[auto] " src={sampleimg} alt="" />
-            <hr />
-            <div className="flex items-center">
-              <p className="text-xl font-bold my-3">
-                <span className="text-[#FFE600] px-1">₦</span>600<span>+</span>{" "}
-              </p>
-              <div className="text-[#828282] border-[2px] text-[10px] p-1 rounded-xl mx-2">
-                <p className="">50% off</p>
-              </div>
-            </div>
-            <h1 className="font-semibold ">England House jardin</h1>
-            <h2 className="text-[#828282] my-1 font- border-r">
-              Description this omnis repudiandae! Accusantium excepturi odit
-              unde ut.
-            </h2>
-            <hr />
-            <div className="flex justify-between">
-              <button className="flex text-center align-middle items-center justify-center bg-[#1859A6] rounded-lg w-[70%] text-white  p-1 my-3">
-                <p className="mx-2">Delete</p>
-                <img className="w-[10%] mx-1" src={saulltechtrash} alt="" />
-              </button>
-              <img src={saulltechlove} alt="" />
-            </div>
-          </section>
-
-
-
-          <section className="flex flex-col  bg-[#ffff] rounded-3xl  px-2 pt-2  pb-[0px] max-w-[12rem]">
-            <img className="w-[10%] ml-[80%] pb-1" src={saulltechstar} alt="" />
-            <img className=" rounded-lg pb-3 w-[10rem] mx-[auto] " src={sampleimg} alt="" />
-            <hr />
-            <div className="flex items-center">
-              <p className="text-xl font-bold my-3">
-                <span className="text-[#FFE600] px-1">₦</span>600<span>+</span>{" "}
-              </p>
-              <div className="text-[#828282] border-[2px] text-[10px] p-1 rounded-xl mx-2">
-                <p className="">50% off</p>
-              </div>
-            </div>
-            <h1 className="font-semibold ">England House jardin</h1>
-            <h2 className="text-[#828282] my-1 font- border-r">
-              Description this omnis repudiandae! Accusantium excepturi odit
-              unde ut.
-            </h2>
-            <hr />
-            <div className="flex justify-between">
-              <button className="flex text-center align-middle items-center justify-center bg-[#1859A6] rounded-lg w-[70%] text-white  p-1 my-3">
-                <p className="mx-2">Delete</p>
-                <img className="w-[10%] mx-1" src={saulltechtrash} alt="" />
-              </button>
-              <img src={saulltechlove} alt="" />
-            </div>
-          </section>
-
-
-
-          <section className="flex flex-col  bg-[#ffff] rounded-3xl  px-2 pt-2  pb-[0px] max-w-[12rem]">
-            <img className="w-[10%] ml-[80%] pb-1" src={saulltechstar} alt="" />
-            <img className=" rounded-lg pb-3 w-[10rem] mx-[auto] " src={sampleimg} alt="" />
-            <hr />
-            <div className="flex items-center">
-              <p className="text-xl font-bold my-3">
-                <span className="text-[#FFE600] px-1">₦</span>600<span>+</span>{" "}
-              </p>
-              <div className="text-[#828282] border-[2px] text-[10px] p-1 rounded-xl mx-2">
-                <p className="">50% off</p>
-              </div>
-            </div>
-            <h1 className="font-semibold ">England House jardin</h1>
-            <h2 className="text-[#828282] my-1 font- border-r">
-              Description this omnis repudiandae! Accusantium excepturi odit
-              unde ut.
-            </h2>
-            <hr />
-            <div className="flex justify-between">
-              <button className="flex text-center align-middle items-center justify-center bg-[#1859A6] rounded-lg w-[70%] text-white  p-1 my-3">
-                <p className="mx-2">Delete</p>
-                <img className="w-[10%] mx-1" src={saulltechtrash} alt="" />
-              </button>
-              <img src={saulltechlove} alt="" />
-            </div>
-          </section>
-
-
-
-          <section className="flex flex-col  bg-[#ffff] rounded-3xl  px-2 pt-2  pb-[0px] max-w-[12rem]">
-            <img className="w-[10%] ml-[80%] pb-1" src={saulltechstar} alt="" />
-            <img className=" rounded-lg pb-3 w-[10rem] mx-[auto] " src={sampleimg} alt="" />
-            <hr />
-            <div className="flex items-center">
-              <p className="text-xl font-bold my-3">
-                <span className="text-[#FFE600] px-1">₦</span>600<span>+</span>{" "}
-              </p>
-              <div className="text-[#828282] border-[2px] text-[10px] p-1 rounded-xl mx-2">
-                <p className="">50% off</p>
-              </div>
-            </div>
-            <h1 className="font-semibold ">England House jardin</h1>
-            <h2 className="text-[#828282] my-1 font- border-r">
-              Description this omnis repudiandae! Accusantium excepturi odit
-              unde ut.
-            </h2>
-            <hr />
-            <div className="flex justify-between">
-              <button className="flex text-center align-middle items-center justify-center bg-[#1859A6] rounded-lg w-[70%] text-white  p-1 my-3">
-                <p className="mx-2">Delete</p>
-                <img className="w-[10%] mx-1" src={saulltechtrash} alt="" />
-              </button>
-              <img src={saulltechlove} alt="" />
-            </div>
-          </section>
 
 
           
