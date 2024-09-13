@@ -13,10 +13,10 @@ function App() {
     <div className='flex bg-[#f9f9f9] '>
       {/* <Signin/> */}
       {/* <Upload/> */}
-      <div className='w-[70%] fixed'>
+      <div className='w-[30%] fixed'>
       <Sidenav/>
       </div>
-      <div className='sm:ml-[23%]   w-[100%]'>      < Gallery/>
+      <div className='sm:ml-[23%]   w-[100%]'> < Gallery/>
       </div>
     </div>
   )

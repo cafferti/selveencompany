@@ -6,8 +6,14 @@ import saulltechlive from"./assets/mobile_friendly.svg"
 import lightlogo from "./assets/logo1.png"
 import darklogo from "./assets/logo2.png"
 function sidenav() {
+
+
+
+
   return (
-    <div className=''>
+
+
+    <div className ='w-[100%]'>
     <nav className='bg-[#1859A6] rounded-tr-lg rounded-br-lg w-[30%] h-screen min-w-[12rem] hidden sm:block text-white font-ubuntu'>
         <div>
             <img className='w-[30%] pt-3 pl-4' src={darklogo} alt="" />
