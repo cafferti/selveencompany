@@ -12,6 +12,7 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
     "react-toastify": "^10.0.5"
   },
   "devDependencies": {
@@ -30,7 +31,5 @@
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
   },
-
-   "proxy": "http://localhost:1123"
+  "proxy": "http://localhost:1123"
 }
-

@@ -6,20 +6,32 @@ import Signin from './signin'
 import Upload from './upload'
 import Gallery from './gallery'
 import Sidenav from './sidenav'
+import { BrowserRouter, Routes, Route, Link, createBrowserRouter,createRoutesFromElements, RouterProvider} from 'react-router-dom'
+import sidenav from './sidenav'
+import upload from './upload'
+
+ {/* <Sidenav/> */}
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+<Route path="/"  element={<Sidenav/>} >
+    <Route index element = {<Gallery/>} />
+    <Route path='/upload' element = {<Upload/>} />
+ </Route>
+
+  )
+)
 
 
 function App() {
   return (
-    <div className='flex bg-[#f9f9f9] '>
-      {/* <Signin/> */}
-      {/* <Upload/> */}
-      <div className='w-[30%] fixed'>
-      <Sidenav/>
-      </div>
-      <div className='sm:ml-[23%]   w-[100%]'> < Gallery/>
-      </div>
-    </div>
-  )
+<RouterProvider router={router}/>
+
+    
+     
+  
+
+  );
 }
 
 export default App
