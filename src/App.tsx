@@ -17,6 +17,8 @@ const router = createBrowserRouter(
 <Route path="/"  element={<Sidenav/>} >
     <Route index element = {<Gallery/>} />
     <Route path='/upload' element = {<Upload/>} />
+    <Route path='/signin' element = {<Signin/>} />
+
  </Route>
 
   )

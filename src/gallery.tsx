@@ -75,7 +75,7 @@ const Gallery: React.FC = () => {
       <ToastContainer />
       <div className="grid-for-images bg-[#f9f9f9] min-h-[100%] px-[10%] sm:px-[0px] font-inter">
 
-        <div className="fixed w-[100%] sm:ml-[8%] bg-[#f9f9f9] pt-6">
+        <div className="fixed w-[100%] sm:left-[30%] lg:left-[25%] bg-[#f9f9f9] pt-6">
           <h1 className="font-ubuntu text-3xl text-color">Dashboard</h1>
           <div className="flex py-4">
             <img src={saulltechsearch} alt="" />

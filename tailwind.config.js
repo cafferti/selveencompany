@@ -7,6 +7,7 @@ module.exports = {
         ubuntu: ['Ubuntu', 'sans-serif'],
         ibm: ['IBM Plex Mono', 'monospace'],
         inter: ['Inter', 'sans-serif'], 
+        pacifico: ['Pacifico', 'cursive'],
       },
     },
   },

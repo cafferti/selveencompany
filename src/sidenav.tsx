@@ -5,6 +5,7 @@ import saulltechkey from "./assets/icon (1).svg"
 import saulltechlive from "./assets/mobile_friendly.svg"
 import lightlogo from "./assets/logo1.png"
 import darklogo from "./assets/logo2.png"
+import uploadsvg from "./assets/Upload cloud.svg"
 import { NavLink, Outlet}  from 'react-router-dom'
 import './App.css'
 
@@ -17,8 +18,8 @@ function sidenav() {
 
   return (
 
-    <div className='flex'>
-      <nav className='bg-[#1859A6] rounded-tr-lg rounded-br-lg w-[20%] h-screen min-w-[12rem] hidden sm:block text-white font-ubuntu fixed'>
+    <div className=' overflow-x-hidden'>
+      <nav className='bg-[#1859A6] rounded-tr-lg rounded-br-lg w-[23%] h-screen min-w-[12rem] hidden sm:block text-[#F2F2F2] font-ubuntu fixed'>
         <div>
           <img className='w-[30%] pt-3 pl-4' src={darklogo} alt="" />
         </div>
@@ -29,7 +30,7 @@ function sidenav() {
         </NavLink>
 
         <NavLink to="/upload" className='flex items-center pl-[30%] py-4 hover:pl-[32%] cursor-pointer hover:border-black'>
-          <img src={saulltechdash} alt="" />
+          <img src={uploadsvg} alt="" />
           <p className='px-3'>Upload</p>
         </NavLink>
 
@@ -45,14 +46,14 @@ function sidenav() {
           <p className='px-3'>Manage password</p>
         </NavLink>
 
-        <NavLink to="/signin" className='flex items-center pl-[30%] py-4 hover:pl-[32%] cursor-pointer'>
+        < div className='  flex items-center pl-[30%] absolute w-[100%] bottom-0 border-t border-[#102e53] py-2 hover:pl-[32%] cursor-pointer'>
           <img className='w-[10%]' src={saulltechlog} alt="" />
           <p className='px-3'>Logout</p>
-        </NavLink>
+        </div>
 
       </nav>
 
-      <main className='w-[100%] ml-[15%]'>
+      <main className='w-[100%] sm:ml-[15%]'>
        <Outlet/>
       </main>
 
