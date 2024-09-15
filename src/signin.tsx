@@ -2,13 +2,15 @@ import React from 'react'
 import { useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Link, Outlet } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 
 function signin (){
     const [Username, setUsername] = useState('')
     const [Password, setPassword] = useState('')
     const [success,setSucess] = useState ('false')
-
+    const navigate = useNavigate();
     
     const proceedLogin= (e) =>{
           e.preventDefault()
@@ -29,6 +31,7 @@ function signin (){
 
    const login = async (e) => {
        const validparameters = proceedLogin(e)
+       
        if (validparameters === null) {
       
        } else {
@@ -50,6 +53,7 @@ function signin (){
             console.log(data)
             console.log('good boy')
             toast.success('Admin Logged In Sucessfully')
+            navigate('/dash/gallery');
         
          }else if(response.status === 401){
            toast.warning('wrong username or password')
@@ -77,7 +81,6 @@ function signin (){
             <input value={Password} onChange={(e)=>setPassword(e.target.value)} className='ApiPassKey border-gray border-[2px] rounded-3xl text-center py-3 px-[5rem] text-black' type="text" placeholder='password' />
             <button onClick={login} className='p-3 rounded-2xl bg-white text-black my-7 px-5'>Login</button>
         </form>
-        
     </div>
   )}
 

@@ -86,7 +86,7 @@ function upload() {
         <input name='name' placeholder='Name' className=' bg-inherit border w-[80%]  px-3 sm:w-[100%] max-w-[25rem] border-gray-800 ml-5 mt-4 py-2 rounded-2xl' type="text" /> <br />
         <div className='bg-[#B1B5B9] w-[100%] h-[0.5px] '></div>
         
-        <button className='border p-2 rounded-2xl text-white text-black my-2 px-5 ml-5 bg-[#263A5C]'>Upload</button>
+        <button className='border p-2 rounded-2xl text-white my-2 px-5 ml-5 bg-[#263A5C]'>Upload</button>
       </form>
 
     </div>

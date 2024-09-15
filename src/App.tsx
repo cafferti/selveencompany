@@ -14,14 +14,18 @@ import upload from './upload'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-<Route path="/"  element={<Sidenav/>} >
-    <Route index element = {<Gallery/>} />
-    <Route path='/upload' element = {<Upload/>} />
-    <Route path='/signin' element = {<Signin/>} />
+<>
+      {/* Route for Signin page */}
+      <Route path="/" element={<Signin />} />
 
- </Route>
-
-  )
+      {/* Route for the dashboard with Sidenav */}
+      <Route path="/dash" element={<Sidenav />}>
+        {/* Nested routes within Sidenav */}
+        <Route index element={<Gallery />} />
+        <Route path="gallery" element={<Gallery />} />
+        <Route path="upload" element={<Upload />} />
+      </Route>
+    </>  )
 )
 
 

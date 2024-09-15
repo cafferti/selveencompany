@@ -24,12 +24,12 @@ function sidenav() {
           <img className='w-[30%] pt-3 pl-4' src={darklogo} alt="" />
         </div>
 
-        <NavLink to="/" className='flex items-center pl-[30%] mt-[5rem] py-4 hover:pl-[32%] cursor-pointer hover:border-black'>
+        <NavLink to="/Dash/gallery" className='flex items-center pl-[30%] mt-[5rem] py-4 hover:pl-[32%] cursor-pointer hover:border-black'>
           <img src={saulltechdash} alt="" />
           <p className='px-3'>Dasboard</p>
         </NavLink>
 
-        <NavLink to="/upload" className='flex items-center pl-[30%] py-4 hover:pl-[32%] cursor-pointer hover:border-black'>
+        <NavLink to="/Dash/upload" className='flex items-center pl-[30%] py-4 hover:pl-[32%] cursor-pointer hover:border-black'>
           <img src={uploadsvg} alt="" />
           <p className='px-3'>Upload</p>
         </NavLink>
