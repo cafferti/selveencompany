@@ -3,6 +3,11 @@ import { useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import sampleimg from './assets/chris-ried-ieic5Tq8YMk-unsplash.jpg'
+import { NavLink } from "react-router-dom";
+import lightlogo from "./assets/logo1.png"
+import closeicon from './assets/Close_MD.svg'
+import saulltechmenu from './assets/menu.svg'
+
 
 
 const collectonsubmit = async (e) => {
@@ -67,17 +72,57 @@ const collectonsubmit = async (e) => {
 }
 
 
-//to clear inputs//
+
 
 
 
 function upload() {
+
+  const [monitor, setmonitor] = useState('hidden')
+  const [burger, setburger] = useState('block')
+  const direct = 'border-b pb-1 pt-0 my-0 hover:text-3xl'
+
+
+  const toggle = () => {
+    if (monitor === 'hidden') {
+      setmonitor('block')
+      setburger('hidden')
+
+    } else {
+      setmonitor('hidden')
+      setburger('block')
+
+    }
+  }
+
+
   return (
     <div className=' '>
       <ToastContainer />
 
+      <div className={` ${monitor} overide absolute w-[100%] text-xl text-black h-[100%]  bg-[rgba(249,249,249,0.8)] mt-[-1.5rem] sm:hidden `}>
+        <nav className=' w-[70%]  bg-[#F2F2F2] h-[100%] ml-[30%] flex flex-col '>
+          <div className="flex justify-between px-[5%] mb-[3rem] pt-10">
+            <img className="w-[3rem] " src={lightlogo} alt="" />
+            <button onClick={toggle} className="w-[15%] border-gray-400 border"> <img className="w-[100%]" src={closeicon} alt="" />
+            </button>
+
+          </div>
+          <NavLink className={direct} to='/Dash/gallery'> Dashboard</NavLink> <br />
+          <NavLink className={direct} to='/Dash/upload'> Upload</NavLink> <br />
+          <a className="active border-b border-1" href="">Live Site</a> <br />
+          <NavLink className={direct} to=''>Manage Password</NavLink> <br />
+        </nav>
+      </div>
+      <button onClick={toggle} className={`${burger} sm:hidden absolute right-[10%] mt-6`}>
+        <img className='w-[3rem]' src={saulltechmenu} alt="" />
+      </button>
+
+
+
+
       <form onSubmit={collectonsubmit} className=' flex flex-col text-center items-center text-black border sm:ml-[10rem] sm:mr-[30%] md:px-0 sm:px-[10%] bg-[blu]  h-screen justify-between sm:justify-normal my-3'>
-        <h1 className=' font-pacifico pt-[1rem] pb-[4rem] text-3xl text-[#FFE600]  '>Upload File</h1>
+        <h1 className=' self-start sm:self-center pl-6 pt-7 font-pacifico sm:pt-[1rem] pb-[4rem] text-3xl text-[#FFE600]  '>Upload File</h1>
         <p className='text-[#B1B5B9] px-[5%]'>Enter item description</p>
         <textarea name='description' placeholder='Description' className=' bg-inherit border px-3 w-[80%] sm:w-[100%] max-w-[25rem] border-gray-800 ml-5 mt-4 py-2 rounded-2xl' type="text" /> <br />
         <input name='imageUrl' placeholder='image URL' className='  border px-3 w-[80%]  sm:w-[100%] max-w-[25rem] border-gray-800 ml-5 mt-4 py-2 rounded-2xl bg-inherit' type="file" /> <br />
@@ -85,7 +130,7 @@ function upload() {
 
         <input name='name' placeholder='Name' className=' bg-inherit border w-[80%]  px-3 sm:w-[100%] max-w-[25rem] border-gray-800 ml-5 mt-4 py-2 rounded-2xl' type="text" /> <br />
         <div className='bg-[#B1B5B9] w-[100%] h-[0.5px] '></div>
-        
+
         <button className='border p-2 rounded-2xl text-white my-2 px-5 ml-5 bg-[#263A5C]'>Upload</button>
       </form>
 

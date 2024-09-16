@@ -6,6 +6,14 @@ import saulltechtrash from "./assets/Icon.svg";
 import saulltechsearch from "./assets/ic_round-search.svg";
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { NavLink } from "react-router-dom";
+import lightlogo from "./assets/logo1.png"
+import closeicon from './assets/Close_MD.svg'
+import saulltechmenu from './assets/menu.svg'
+
+
+
+const direct = 'border-b pb-1 pt-0 my-0 hover:text-3xl'
 
 // Define the structure of a gallery item using an interface
 interface GalleryItem {
@@ -32,7 +40,7 @@ const Gallery: React.FC = () => {
           const result = await response.json();
           if (Array.isArray(result.data)) {
             setItems(result.data); // Save the fetched data to the state
-            
+
           } else {
             throw new Error('Unexpected data structure');
           }
@@ -54,7 +62,7 @@ const Gallery: React.FC = () => {
       const response = await fetch(`https://saul.onrender.com/api/v1/gallery/${id}`, {
         method: 'DELETE',
       });
-         console.log(id);
+      console.log(id);
       if (response.ok) {
         // Filter out the deleted item from the state
         console.log('i am in love')
@@ -69,6 +77,21 @@ const Gallery: React.FC = () => {
     }
   };
 
+  const [monitor, setmonitor] = useState('hidden')
+  const [burger, setburger] = useState('block')
+
+  const toggle = () => {
+    if (monitor === 'hidden') {
+      setmonitor('block')
+      setburger('hidden')
+
+    } else {
+      setmonitor('hidden')
+      setburger('block')
+
+    }
+  }
+
 
   return (
     <div>
@@ -76,6 +99,27 @@ const Gallery: React.FC = () => {
       <div className="grid-for-images bg-[#f9f9f9] min-h-[100%] px-[10%] sm:px-[0px] font-inter">
 
         <div className="fixed w-[100%] sm:left-[30%] lg:left-[25%] bg-[#f9f9f9] pt-6">
+
+          <div className={` ${monitor} overide absolute w-[100%] text-xl text-black h-[500%]  bg-[rgba(249,249,249,0.8)] mt-[-1.5rem] sm:hidden `}>
+            <nav className=' w-[70%]  bg-[#F2F2F2] h-[100%] ml-[20%] flex flex-col '>
+              <div className="flex justify-between px-[5%] mb-[3rem] pt-3">
+                <img className="w-[20%] " src={lightlogo} alt="" />
+                <button onClick={toggle} className="w-[15%] border-gray-400 border h-[70%]">          <img className="w-[100%]" src={closeicon} alt="" />
+                </button>
+
+              </div>
+              <NavLink className={direct} to='/Dash/gallery'> Dashboard</NavLink> <br />
+              <NavLink className={direct} to='/Dash/upload'> Upload</NavLink> <br />
+              <a className="active border-b border-1" href="">Live Site</a> <br />
+              <NavLink className={direct} to=''>Manage Password</NavLink> <br />
+            </nav>
+          </div>
+          <button onClick={toggle} className={`${burger} sm:hidden absolute right-[20%]`}>
+            <img src={saulltechmenu} alt="" />
+          </button>
+
+
+
           <h1 className="font-ubuntu text-3xl text-color">Dashboard</h1>
           <div className="flex py-4">
             <img src={saulltechsearch} alt="" />
@@ -121,7 +165,7 @@ const Gallery: React.FC = () => {
 
               {/* Action Buttons */}
               <div className="flex justify-between">
-                <button   onClick={() => handleDelete(item._id)} className="flex text-center align-middle items-center justify-center bg-[#1859A6] rounded-lg w-[70%] text-white p-1 my-3">
+                <button onClick={() => handleDelete(item._id)} className="flex text-center align-middle items-center justify-center bg-[#1859A6] rounded-lg w-[70%] text-white p-1 my-3">
                   <p className="mx-2">Delete</p>
                   <img className="w-[10%] mx-1" src={saulltechtrash} alt="Trash" />
                 </button>
