@@ -13,7 +13,7 @@ import saulltechmenu from './assets/menu.svg'
 
 
 
-const direct = 'border-b pb-1 pt-0 my-0 hover:text-3xl'
+const direct = 'border-b pb-1 pt-0 my-0 hover:text-gray-500 pb-4'
 
 // Define the structure of a gallery item using an interface
 interface GalleryItem {
@@ -100,7 +100,7 @@ const Gallery: React.FC = () => {
 
         <div className="fixed w-[100%] sm:left-[30%] lg:left-[25%] bg-[#f9f9f9] pt-6">
 
-          <div className={` ${monitor} overide absolute w-[100%] text-xl text-black h-[500%]  bg-[rgba(249,249,249,0.8)] mt-[-1.5rem] sm:hidden `}>
+          <div className={` ${monitor} overide absolute w-[100%] text-xl text-black h-[500%]  bg-[rgba(249,249,249,0.8)] mt-[-1.5rem] sm:hidden font-mono `}>
             <nav className=' w-[70%]  bg-[#F2F2F2] h-[100%] ml-[20%] flex flex-col '>
               <div className="flex justify-between px-[5%] mb-[3rem] pt-3">
                 <img className="w-[20%] " src={lightlogo} alt="" />

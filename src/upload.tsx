@@ -80,7 +80,7 @@ function upload() {
 
   const [monitor, setmonitor] = useState('hidden')
   const [burger, setburger] = useState('block')
-  const direct = 'border-b pb-1 pt-0 my-0 hover:text-3xl'
+  const direct = 'border-b pb-1 pt-0 my-0 hover:text-gray-500 pb-4'
 
 
   const toggle = () => {
@@ -100,7 +100,7 @@ function upload() {
     <div className=' '>
       <ToastContainer />
 
-      <div className={` ${monitor} overide absolute w-[100%] text-xl text-black h-[100%]  bg-[rgba(249,249,249,0.8)] mt-[-1.5rem] sm:hidden `}>
+      <div className={` ${monitor} overide absolute w-[100%] text-xl text-black h-[100%] bg-[rgba(249,249,249,0.8)] mt-[-1.5rem] sm:hidden font-mono `}>
         <nav className=' w-[70%]  bg-[#F2F2F2] h-[100%] ml-[30%] flex flex-col '>
           <div className="flex justify-between px-[5%] mb-[3rem] pt-10">
             <img className="w-[3rem] " src={lightlogo} alt="" />
