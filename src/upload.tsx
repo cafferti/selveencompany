@@ -124,11 +124,11 @@ function upload() {
       <form onSubmit={collectonsubmit} className=' flex flex-col text-center items-center text-black border sm:ml-[10rem] sm:mr-[30%] md:px-0 sm:px-[10%] bg-[blu] sm:justify-around  h-screen justify-between sm:justify-normal my-3'>
         <h1 className=' self-start sm:self-center pl-6 pt-7 font-pacifico sm:pt-[1rem] pb-[4rem] text-3xl text-[#FFE600]  '>Upload File</h1>
         <p className='text-[#B1B5B9] px-[5%]'>Enter item description</p>
-        <textarea name='description' placeholder='Description' className=' bg-inherit border px-3 w-[80%] sm:w-[100%] max-w-[25rem] border-gray-800 ml-5 mt-4 py-2 rounded-2xl' type="text" /> <br />
-        <input name='imageUrl' placeholder='image URL' className='  border px-3 w-[80%]  sm:w-[100%] max-w-[25rem] border-gray-800 ml-5 mt-4 py-2 rounded-2xl bg-inherit' type="file" /> <br />
-        <input name='price' placeholder='Price' className=' bg-inherit border px-3 w-[80%]  sm:w-[100%] max-w-[25rem] border-gray-800 ml-5 mt-4 py-2 rounded-2xl' type="text" /> <br />
+        <textarea name='description' placeholder='Description' className=' bg-inherit  px-3 w-[80%] sm:w-[100%] max-w-[25rem] border-gray border-[2px] ml-5 mt-4 py-3 rounded-3xl' type="text" /> <br />
+        <input name='imageUrl' placeholder='image URL' className='  px-3 w-[80%]  sm:w-[100%] max-w-[25rem] border-gray border-[2px] ml-5 mt-4 py-3 rounded-3xl bg-inherit' type="file" /> <br />
+        <input name='price' placeholder='Price' className=' bg-inherit  px-3 w-[80%]  sm:w-[100%] max-w-[25rem] border-gray border-[2px] ml-5 mt-4 py-3 rounded-3xl' type="text" /> <br />
 
-        <input name='name' placeholder='Name' className=' bg-inherit border w-[80%]  px-3 sm:w-[100%] max-w-[25rem] border-gray-800 ml-5 mt-4 py-2 rounded-2xl' type="text" /> <br />
+        <input name='name' placeholder='Name' className=' bg-inherit w-[80%]  px-3 sm:w-[100%] max-w-[25rem] border-gray border-[2px] ml-5 mt-4 py-3 rounded-3xl' type="text" /> <br />
         <div className='bg-[#B1B5B9] w-[100%] h-[0.5px] '></div>
 
         <button className='border p-2 rounded-2xl text-white my-2 px-5 ml-5 bg-[#263A5C]'>Upload</button>
