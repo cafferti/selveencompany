@@ -48,7 +48,7 @@ const logout = () =>{
           <p className='px-3'>Live site</p>
         </a>
 
-        <NavLink to ="Dash/password" className='flex items-center pl-[30%] py-4 hover:pl-[32%] cursor-pointer'>
+        <NavLink to ="/Dash/password" className='flex items-center pl-[30%] py-4 hover:pl-[32%] cursor-pointer'>
           <img src={saulltechkey} alt="" />
           <p className='px-3'>Manage password</p>
         </NavLink>

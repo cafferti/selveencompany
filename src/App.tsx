@@ -6,9 +6,8 @@ import Signin from './signin'
 import Upload from './upload'
 import Gallery from './gallery'
 import Sidenav from './sidenav'
-import { BrowserRouter, Routes, Route, Link, createBrowserRouter,createRoutesFromElements, RouterProvider} from 'react-router-dom'
-import sidenav from './sidenav'
-import upload from './upload'
+import { Route, createBrowserRouter,createRoutesFromElements, RouterProvider} from 'react-router-dom'
+import Managepassword from './managepassword'
 
  {/* <Sidenav/> */}
 
@@ -24,6 +23,7 @@ const router = createBrowserRouter(
         <Route index element={<Gallery />} />
         <Route path="gallery" element={<Gallery />} />
         <Route path="upload" element={<Upload />} />
+        <Route path="password" element={<Managepassword />} />
       </Route>
     </>  )
 )

@@ -111,7 +111,7 @@ const Gallery: React.FC = () => {
               <NavLink className={direct} to='/Dash/gallery'> Dashboard</NavLink> <br />
               <NavLink className={direct} to='/Dash/upload'> Upload</NavLink> <br />
               <a className="active border-b border-1" href="">Live Site</a> <br />
-              <NavLink className={direct} to=''>Manage Password</NavLink> <br />
+              <NavLink className={direct} to='/Dash/password'>Manage Password</NavLink> <br />
             </nav>
           </div>
           <button onClick={toggle} className={`${burger} sm:hidden absolute right-[20%]`}>
