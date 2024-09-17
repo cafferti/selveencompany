@@ -1,27 +1,9 @@
-import React from 'react'
 import { useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Link, Outlet } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-import lightlogo from "./assets/logo1.png"
 import darklogo from "./assets/logo2.png"
-import {
-   BarLoader,
-   BeatLoader,
-   BounceLoader,
-   CircleLoader,
-   ClipLoader,
-   ClockLoader,
-   DotLoader,
-   FadeLoader,
-   GridLoader,
-   HashLoader,
-   PacmanLoader,
-   PulseLoader,
-   RingLoader,
-   SyncLoader
-} from 'react-spinners';
+import {PulseLoader,CircleLoader} from 'react-spinners';
 
 
 
@@ -35,7 +17,7 @@ function signin() {
    const navigate = useNavigate();
    const [loading, setwaiting] = useState(false)
 
-   const proceedLogin = (e) => {
+   const proceedLogin = (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault()
       if (Username === '') {
          toast.warning('Enter a Valid Username')
@@ -52,7 +34,7 @@ function signin() {
       }
    };
 
-   const login = async (e) => {
+   const login = async (e: React.FormEvent<HTMLFormElement>) => {
       const validparameters = proceedLogin(e)
 
       if (validparameters === null) {
@@ -77,11 +59,9 @@ function signin() {
                const data = await response.json()
                toast.success('Admin Logged In Sucessfully')
                const token = data.data.token;
-               console.log(token)
                localStorage.setItem('token', token);
                setwaiting(false)
                navigate('/dash/gallery');
-
             } else if (response.status === 401) {
                toast.warning('wrong username or password')
                setwaiting(false)
@@ -110,7 +90,8 @@ function signin() {
             <img className='w-[25%] sm:w-[10%] opacity-50' src={darklogo} alt="" />
             <p>Login</p>
          </div>
-         <form className=' border border-gray-700 flex flex-col  mx-[10%] items-center align-middle py-[20%] h-100%] sm:mx-[30%] md:py-[5rem] '>
+         <form onSubmit={login}  className=' border border-gray-700 flex flex-col  mx-[10%] items-center align-middle py-[20%] h-100%] sm:mx-[30%] md:py-[5rem] '>
+
 
             {loading ? (
                <div className={`spinner-containerabs w-[100%]`}>
@@ -121,13 +102,11 @@ function signin() {
                <CircleLoader className={`ml-[40%]`} color={"#f2f2f2"} loading />
             </div>
             )
-
-
-
             }
+
             <input value={Username} onChange={(e) => setUsername(e.target.value)} id='Username' className='ApiName border-gray border-[2px] my-[2rem] rounded-3xl text-center py-3 w-[80%] text-black' type="text" placeholder='Name' /> <br />
-            <input value={Password} onChange={(e) => setPassword(e.target.value)} className='ApiPassKey border-gray border-[2px] rounded-3xl text-center py-3 w-[80%] text-black' type="text" placeholder='password' />
-            <button onClick={login} className='p-3 rounded-2xl bg-white text-black my-7 px-5 hover:bg-blue-950 hover:text-white'>Login</button>
+            <input value={Password} onChange={(e) => setPassword(e.target.value)} className='ApiPassKey border-gray border-[2px] rounded-3xl text-center py-3 w-[80%] text-black' type="password" placeholder='password' />
+            <button className='p-3 rounded-2xl bg-white text-black my-7 px-5 hover:bg-blue-950 hover:text-white'>Login</button>
          </form>
       </div>
    )

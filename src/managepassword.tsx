@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { toast, ToastContainer } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
 import 'react-toastify/dist/ReactToastify.css';
 import { NavLink } from 'react-router-dom';
 import lightlogo from "./assets/logo1.png"
@@ -22,11 +21,10 @@ function Managepassword() {
     const [Oldpassword, setoldpassword] = useState('')
     const [Newpassword, setnewpassword] = useState('')
     const [success,setSucess] = useState ('false')
-    const navigate = useNavigate();
     const token = localStorage.getItem('token');
     const [monitoloader, setmonitorloader] = useState('hidden')
     
-    const proceedLogin= (e) =>{
+    const proceedLogin= (e: React.FormEvent<HTMLFormElement>) =>{
           e.preventDefault()
           console.log(token)
        if (Oldpassword === '') {
@@ -44,7 +42,7 @@ function Managepassword() {
        }  
     };
 
-   const changepassword = async (e) => {
+   const changepassword = async (e: React.FormEvent<HTMLFormElement>) => {
        const validparameters = proceedLogin(e)
        
        if (validparameters === null) {
@@ -67,12 +65,7 @@ function Managepassword() {
          });
          try{if(response.ok){
           setmonitorloader('hidden')
-            const data = await response.json()
-            console.log(data)
-            console.log('good boy')
             toast.success('Password sucessfully changed  ~saulltech')
-            // navigate('/dash/gallery');
-        
          }else if(response.status === 401){
            toast.warning('wrong password or passwords')
            setmonitorloader('hidden')
@@ -131,7 +124,7 @@ function Managepassword() {
       </button>
 
 
-        <form className=' h-[95%] border border-gray-200 flex flex-col   items-center align-middle pb-[5%] h-100%] sm:mx-[30%] md:py-[2%] '>
+        <form onSubmit={changepassword} className=' h-[95%] border border-gray-200 flex flex-col   items-center align-middle pb-[5%] h-100%] sm:mx-[30%] md:py-[2%] '>
         <h1 className='text-3xl font-pacifico self-start mt-4 ml-[10%] mb-[20%]  text-[#FFE600]'>Password</h1>
         <div className={`spinner-containerabs ${monitoloader} w-[100%]`}>
           <BarLoader className={`ml-[40%]`} color={"#123abc"} loading />
@@ -139,9 +132,9 @@ function Managepassword() {
 
          <p className=' text-black self-start ml-[10%] py-3 font-inter'>Change your Password</p>
 
-            <input value={Oldpassword} onChange={ (e)=>setoldpassword(e.target.value)} id='Username' className='ApiName border-gray border-[2px] mb-[2rem] rounded-3xl text-center p-3 w-[80%] text-black' type="text" placeholder='old password' /> <br />
-            <input value={Newpassword} onChange={ (e)=>setnewpassword(e.target.value)} className='ApiPassKey border-gray border-[2px] rounded-3xl text-center py-3 w-[80%] text-black' type="text" placeholder='New password' />
-            <button onClick={changepassword} className='p-3 rounded-2xl bg-white text-black my-7 px-5 hover:bg-blue-950 hover:text-white'>Change Password</button>
+            <input value={Oldpassword} onChange={ (e)=>setoldpassword(e.target.value)} id='Username' className='ApiName border-gray border-[2px] mb-[2rem] rounded-3xl text-center p-3 w-[80%] text-black' type="password" placeholder='old password' /> <br />
+            <input value={Newpassword} onChange={ (e)=>setnewpassword(e.target.value)} className='ApiPassKey border-gray border-[2px] rounded-3xl text-center py-3 w-[80%] text-black' type="password" placeholder='New password' />
+            <button className='p-3 rounded-2xl bg-white text-black my-7 px-5 hover:bg-blue-950 hover:text-white'>Change Password</button>
         </form>
     </div>
   )

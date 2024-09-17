@@ -33,12 +33,11 @@ function upload() {
   const [monitorloader, setmonitorloader] = useState('hidden')
 
 
-  const collectonsubmit = async (e) => {
+  const collectonsubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 
     e.preventDefault()
 
     const formData = new FormData(e.currentTarget) //e.formdata gets the inputs which the function and event handler is attached to i.e(collectonsubmit.e)//
-    console.log(formData);
     {
       // const description = formData.get('description');
       // const imageurl = formData.get('imageurl');
@@ -49,11 +48,8 @@ function upload() {
       //shorter method//
     }
     const data = Object.fromEntries(formData)
-    console.log(data)
-
     //now to get an array of just the values//
     const values = [...formData.values()]
-    console.log(values)
     //getting the values and check if anyone is empty so you will throw an error
     const oneisempty = values.includes('')
     if (oneisempty) {
@@ -72,11 +68,8 @@ function upload() {
         });
 
         if (response.ok) {
-          const responseData = await response.json();
-          console.log('Response:', responseData);
           toast.success('Upload successful! ~saulltech');
           setmonitorloader('hidden')
-
         } else {
           toast.error(`check your connectionand try again,: ${response.statusText}`);
           setmonitorloader('hidden')
@@ -89,11 +82,6 @@ function upload() {
 
     }
 
-    //send to server//
-
-
-    // e.currentTarget.reset();
-
   }
 
 
@@ -101,7 +89,6 @@ function upload() {
   return (
     <div className=' bg-[#f9f9f9] mt-[-1rem] h-[100%] '>
       <ToastContainer />
-
       <div className={` ${monitor} overide absolute w-[100%] text-xl text-black h-[100%] bg-[rgba(249,249,249,0.8)] mt-[-1.5rem] sm:hidden font-mono `}>
         <nav className=' w-[70%]  bg-[#F2F2F2] h-[100%] ml-[30%] flex flex-col '>
           <div className="flex justify-between px-[5%] mb-[3rem] pt-10">
@@ -123,7 +110,7 @@ function upload() {
 
 
 
-      <form onSubmit={collectonsubmit} className=' flex flex-col text-center items-center text-black border sm:ml-[10rem] sm:mr-[30%] md:px-0 sm:px-[10%] bg-[blu] sm:justify-around  h-screen justify-between sm:justify-normal my-3'>
+      <form onSubmit={collectonsubmit} className=' flex flex-col text-center items-center text-black border sm:ml-[10rem] sm:mr-[30%] md:px-0 sm:px-[10%] bg-[blu] sm:justify-around  h-screen justify-between my-3'>
 
         <h1 className=' self-start sm:self-center pl-6 pt-7 font-pacifico sm:pt-[1rem] pb-[4rem] text-3xl text-[#FFE600]  '>Upload File</h1>
         <p className='text-[#B1B5B9] px-[5%]'>Enter item description</p>
