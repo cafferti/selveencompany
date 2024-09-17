@@ -8,6 +8,8 @@ import lightlogo from "./assets/logo1.png"
 import darklogo from "./assets/logo2.png"
 import uploadsvg from "./assets/Upload cloud.svg"
 import { NavLink, Outlet}  from 'react-router-dom'
+
+
 import './App.css'
 
 
@@ -61,6 +63,7 @@ const logout = () =>{
       </div>
 
       <main className='w-[100%] sm:ml-[15%]'>
+
        <Outlet/>
       </main>
 

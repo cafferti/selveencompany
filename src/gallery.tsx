@@ -10,7 +10,22 @@ import { NavLink } from "react-router-dom";
 import lightlogo from "./assets/logo1.png"
 import closeicon from './assets/Close_MD.svg'
 import saulltechmenu from './assets/menu.svg'
-
+import {
+  BarLoader,
+  BeatLoader,
+  BounceLoader,
+  CircleLoader,
+  ClipLoader,
+  ClockLoader,
+  DotLoader,
+  FadeLoader,
+  GridLoader,
+  HashLoader,
+  PacmanLoader,
+  PulseLoader,
+  RingLoader,
+  SyncLoader
+} from 'react-spinners';
 
 
 const direct = 'border-b pb-1 pt-0 my-0 hover:text-gray-500 pb-4'
@@ -30,19 +45,26 @@ interface GalleryItem {
 const Gallery: React.FC = () => {
   // State to hold the gallery items
   const [items, setItems] = useState<GalleryItem[]>([]);
+  const [monitorloader, Setmonitorloader] = useState('block')
+
 
   // Fetch gallery items from the API
   useEffect(() => {
     const getGallery = async () => {
+
       try {
         const response = await fetch('https://saul.onrender.com/api/v1/gallery/');
         if (response.ok) {
           const result = await response.json();
           if (Array.isArray(result.data)) {
             setItems(result.data); // Save the fetched data to the state
+            Setmonitorloader('hidden')
+    
 
           } else {
             throw new Error('Unexpected data structure');
+            toast.success('hello welcome Admin ~saulltech')
+
           }
         } else {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -50,11 +72,13 @@ const Gallery: React.FC = () => {
       } catch (error) {
         console.error('Error:', error);
         toast.error('Failed to load gallery');
+        Setmonitorloader('hidden')
       }
     };
-
     getGallery();
+  
     toast.success('hello welcome Admin ~saulltech')
+
   }, []);
 
   const handleDelete = async (id: string) => {
@@ -129,10 +153,15 @@ const Gallery: React.FC = () => {
               type="text"
             />
           </div>
+          
         </div>
-
+        
         {/* Dynamically render the gallery items */}
         <div className="sm:ml-[10%] grid gap-4 pt-[10rem] grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
+        <div className={`spinner-containerabs ${monitorloader} bg-white w-[100%] py-[50%] mx-0 pr-[40%] sm:py-[20%] md:py-[10%] md:pr-[20%]`}>
+          <HashLoader className={`ml-[40%]`} color={"#123abc"} loading size={200} />
+        </div>
+
           {items.map((item) => (
             <section key={item._id} className="flex flex-col mx-auto bg-[#ffff] rounded-3xl px-2 pt-2 pb-[0px] max-w-[15rem]">
               {/* Star Icon */}
