@@ -45,7 +45,7 @@ const logout = () =>{
 
 
 
-        <a className='flex items-center pl-[30%] py-4 hover:pl-[32%] cursor-pointer'>
+        <a href='http://selveencompany.com.ng' className='flex items-center pl-[30%] py-4 hover:pl-[32%] cursor-pointer'>
           <img src={saulltechlive} alt="" />
           <p className='px-3'>Live site</p>
         </a>

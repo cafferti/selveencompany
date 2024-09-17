@@ -112,7 +112,7 @@ function upload() {
           </div>
           <NavLink className={direct} to='/Dash/gallery'> Dashboard</NavLink> <br />
           <NavLink className={direct} to='/Dash/upload'> Upload</NavLink> <br />
-          <a className="active border-b border-1" href="">Live Site</a> <br />
+          <a className="active border-b border-1" href="http://selveencompany.com.ng">Live Site</a> <br />
           <NavLink className={direct} to='/Dash/password'>Manage Password</NavLink> <br />
         </nav>
       </div>
