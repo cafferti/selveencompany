@@ -1,10 +1,8 @@
-import React from 'react';
 import saulltechdash from "./assets/ic_sharp-dashboard.svg"
 import { useNavigate } from 'react-router-dom';
 import saulltechlog from "./assets/Icon (2).svg"
 import saulltechkey from "./assets/icon (1).svg"
 import saulltechlive from "./assets/mobile_friendly.svg"
-import lightlogo from "./assets/logo1.png"
 import darklogo from "./assets/logo2.png"
 import uploadsvg from "./assets/Upload cloud.svg"
 import { NavLink, Outlet}  from 'react-router-dom'

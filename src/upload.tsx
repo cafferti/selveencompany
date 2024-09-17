@@ -47,7 +47,7 @@ function upload() {
 
       //shorter method//
     }
-    const data = Object.fromEntries(formData)
+    // const data = Object.fromEntries(formData)
     //now to get an array of just the values//
     const values = [...formData.values()]
     //getting the values and check if anyone is empty so you will throw an error

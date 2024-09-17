@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import sampleimg from "./assets/chris-ried-ieic5Tq8YMk-unsplash.jpg";
+import  { useState, useEffect } from "react";
 import saulltechstar from "./assets/Combined-Shape.svg";
 import saulltechlove from "./assets/Secondary green.svg";
 import saulltechtrash from "./assets/Icon.svg";
@@ -10,22 +9,7 @@ import { NavLink } from "react-router-dom";
 import lightlogo from "./assets/logo1.png"
 import closeicon from './assets/Close_MD.svg'
 import saulltechmenu from './assets/menu.svg'
-import {
-  BarLoader,
-  BeatLoader,
-  BounceLoader,
-  CircleLoader,
-  ClipLoader,
-  ClockLoader,
-  DotLoader,
-  FadeLoader,
-  GridLoader,
-  HashLoader,
-  PacmanLoader,
-  PulseLoader,
-  RingLoader,
-  SyncLoader
-} from 'react-spinners';
+import {HashLoader} from 'react-spinners';
 
 
 const direct = 'border-b pb-1 pt-0 my-0 hover:text-gray-500 pb-4'
