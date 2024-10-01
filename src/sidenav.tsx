@@ -17,7 +17,6 @@ function sidenav() {
 
 const logout = () =>{
   navigate('/');
-
 }
 
 

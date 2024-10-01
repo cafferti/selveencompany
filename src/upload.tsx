@@ -59,7 +59,7 @@ function upload() {
       setmonitorloader('block')
       toast.success('communicating with server....')
       try {
-        const response = await fetch('https://saul.onrender.com/api/v1/gallery/add', {
+        const response = await fetch('https://saul-8bpn.onrender.com/api/v1/gallery/add', {
           method: 'POST',
           body: formData, // Pass formData directly to the backend
           headers: {
@@ -71,7 +71,7 @@ function upload() {
           toast.success('Upload successful! ~saulltech');
           setmonitorloader('hidden')
         } else {
-          toast.error(`check your connectionand try again,: ${response.statusText}`);
+          toast.error(`check your connection and try again,: ${response.statusText}`);
           setmonitorloader('hidden')
 
         }

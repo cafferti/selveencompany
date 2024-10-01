@@ -37,10 +37,11 @@ const Gallery: React.FC = () => {
     const getGallery = async () => {
 
       try {
-        const response = await fetch('https://saul.onrender.com/api/v1/gallery/');
+        const response = await fetch('https://saul-8bpn.onrender.com/api/v1/gallery/');
         if (response.ok) {
           const result = await response.json();
-          if (Array.isArray(result.data)) {
+             preloadImages(result.data)
+          if (Array.isArray(result.data)) { 
             setItems(result.data); // Save the fetched data to the state
             Setmonitorloader('hidden')
     
@@ -65,9 +66,22 @@ const Gallery: React.FC = () => {
 
   }, []);
 
+  const preloadImages = (galleryItems: GalleryItem[]) => {
+    galleryItems.forEach(item => {
+      if (item.imageUrl.length > 0) {
+        console.log(item.imageUrl)
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = item.imageUrl[0]; // Preload the first image URL
+        link.as = 'image';
+        document.head.appendChild(link);
+      }
+    }); // Closing brace was missing here
+  };
+
   const handleDelete = async (id: string) => {
     try {
-      const response = await fetch(`https://saul.onrender.com/api/v1/gallery/${id}`, {
+      const response = await fetch(`https://saul-8bpn.onrender.com/api/v1/gallery/${id}`, {
         method: 'DELETE',
       });
       console.log(id);
@@ -141,18 +155,18 @@ const Gallery: React.FC = () => {
         </div>
         
         {/* Dynamically render the gallery items */}
-        <div className="sm:ml-[10%] grid gap-4 pt-[10rem] grid-cols-[repeat(auto-fit,minmax(200px,1fr))]">
+        <div className="sm:ml-[10%] grid gap-4 pt-[10rem] md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] md:mr-[15%]">
         <div className={`spinner-containerabs ${monitorloader} bg-white w-[100%] py-[50%] mx-0 pr-[40%] sm:py-[20%] md:py-[10%] md:pr-[20%]`}>
           <HashLoader className={`ml-[40%]`} color={"#123abc"} loading size={200} />
         </div>
 
-          {items.map((item) => (
+          {items.slice().reverse().map((item) => (
             <section key={item._id} className="flex flex-col mx-auto bg-[#ffff] rounded-3xl px-2 pt-2 pb-[0px] max-w-[15rem]">
               {/* Star Icon */}
               <img className="w-[10%] ml-[80%] pb-1" src={saulltechstar} alt="Star" />
 
               {/* Gallery Image */}
-              <img className="rounded-lg pb-3 w-[10rem] mx-[auto]" src={item.imageUrl[0]} alt={item.name} />
+              <img className="rounded-lg pb-3 w-[100%] h-[50%] mx-[auto]" src={item.imageUrl[0]} alt={item.name} />
 
               <hr />
 

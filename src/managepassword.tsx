@@ -55,7 +55,7 @@ function Managepassword() {
          }
         console.log(logindata)
         setmonitorloader('block')
-         const response = await fetch('https://saul.onrender.com/api/v1/auth/update-password',{
+         const response = await fetch('https://saul-8bpn.onrender.com/api/v1/auth/update-password',{
            method:'PUT',
             headers:{
                 "content-type": `application/json`,
